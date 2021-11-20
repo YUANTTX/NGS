@@ -1,0 +1,7 @@
+该文件夹属于建立索引，比对软件为了提高比对效率会提前建立索引，使用索引而不是基因组与reads比对。
+建立索引：
+	bowtie2.sh  
+	bwa.sh  
+	hisat.sh  
+	salmon.sh  
+	star.sh

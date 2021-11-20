@@ -1,0 +1,10 @@
+用于序列比对：alignment、mapping
+主要软件：
+	bowtie2
+	bwa
+	hisat2
+	samlon
+	star
+
+注意：
+	所有的比对都需要先建立索引，并且需要留意reads的长度以选用合适的比对软件；部分软件需要GTF注释，以及注释。

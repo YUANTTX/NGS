@@ -1,0 +1,6 @@
+该文件用于去除测序文件的接头、接尾、低质量序列、过短序列、过长序列等等。
+主要软件：
+	# fastp: 
+	# cutadapt:
+	# trim_glore
+	# trimmmomation

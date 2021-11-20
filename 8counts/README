@@ -1,0 +1,10 @@
+使用多种计数软件计算counts，counts可以通过sam、bam计算。
+
+主要软件：
+	# featureCounts
+	# htseq-count
+	# cufflinks
+
+注意：
+	featureCounts需要区分单端与双端测序数据
+	计数完成后，基本都是单个文件，需要合并到一个文件里。

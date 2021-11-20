@@ -1,0 +1,20 @@
+工作空间准备，创建需要的文件夹。
+文件组织如下：
+.
+├── input
+│   ├── cleanfq		# 去除接头接尾、低质量序列的fastq
+│   ├── fastq		# sra解压后的fastq
+│   ├── rmrRNAfq	# 去除核糖体后的fastq
+│   └── sra		# 下载的原始数据
+├── output
+│   ├── bam		# 由sam转换而来
+│   ├── bamsort		# 存放排序后的bam文件，与bam.sai索引文件
+│   ├── counts		# 每个样本的counts
+│   ├── fastqc		# 数据质量文件
+│   ├── finall		# 合并后的counts、vcf等多种最终结果
+│   ├── multiqc		# 将fastqc的结果整合在一起
+│   └── sam		# 存放alignment比对结果
+├── README
+└── workspace.sh	# 需要执行的脚本
+
+13 directories, 2 files

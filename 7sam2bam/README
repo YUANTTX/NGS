@@ -1,0 +1,10 @@
+对sam文件进行转换以及统计。
+主要操作：
+	# 第一步：转换 sam -> bam；
+	# 第二步：排序 bam -> sort.bam
+	# 第三步：建立索引 sort.bam -> bam.sai
+	# 第四步：统计突变数据 bcf
+主要软件：
+	samtools
+	bedtools
+

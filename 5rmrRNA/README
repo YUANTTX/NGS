@@ -1,0 +1,11 @@
+去除测序文件中的rRNA、tRNA等序列。
+具体操作：
+	# 第一步：在NCBI、UCSC等数据库下载rRNA序列；
+	# 第二步：使用bowtie2 建立rRNA索引；
+	# 第三步：使用bowtie2 将fastq比对到rRNA，输出未比对到rRNA上的reads，作为去除核糖体序列的reads。
+
+主要软件：
+	# bowtie2
+
+注意：
+	dev/null 是一个‘黑洞’，指向该目录的文件会被直接删除；因为我们不需要比对上的reads(核糖体序列)，因此我们直接丢弃。

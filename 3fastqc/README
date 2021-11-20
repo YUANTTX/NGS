@@ -1,0 +1,9 @@
+对数据进行质控，fastqc进行质控，multiqc将fastqc结果整合在一起。
+用法：
+	fastqc -t 4 -q SRR123.fastq -o ./output/fastqc/
+
+	multiqc -p -pdf ./output/fastqc/* -o ./output/multiqc/
+
+注意：
+	fastqc需要Java环境，Java不能直接打开(没有图形界面会报错，不影响使用)
+	multiqc需要python环境，不好安装，使用pip安装。

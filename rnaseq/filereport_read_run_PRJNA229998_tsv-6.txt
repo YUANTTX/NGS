@@ -1,0 +1,7 @@
+SRR1039509	fasp.sra.ebi.ac.uk:/vol1/srr/SRR103/009/SRR1039509
+SRR1039510	fasp.sra.ebi.ac.uk:/vol1/srr/SRR103/000/SRR1039510
+SRR1039511	fasp.sra.ebi.ac.uk:/vol1/srr/SRR103/001/SRR1039511
+SRR1039512	fasp.sra.ebi.ac.uk:/vol1/srr/SRR103/002/SRR1039512
+SRR1039513	fasp.sra.ebi.ac.uk:/vol1/srr/SRR103/003/SRR1039513
+SRR1039514	fasp.sra.ebi.ac.uk:/vol1/srr/SRR103/004/SRR1039514
+

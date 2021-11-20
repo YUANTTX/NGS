@@ -1,0 +1,20 @@
+该目录用于下载测序的原始数据：
+从NCBI下载数据，使用sra_toolkit中的prefetch：
+	# 需要在scrips指定的目录中有 SRRxxx.txt 文件，不需要添加额外的参数
+	sh step1_download_prefetch.sh 
+
+从ENA下载数据，使用ascp：
+	# 第一步在NCBI获得SRA项目号：PRJNA523167
+	# 第二步在ENA brower 中输入该项目号，下载TSV文件
+	# 第三步window中以^m$'作为换行符，liunx以'^$'，需要转换
+	# ^M = ctrl + v,ctrl + m 
+	# 替换：sed -i 's/^M//g' filereport_read_run_PRJNA229998_tsv.txt
+	step1_download_ascp2.sh filereport_read_run_PRJNA229998_tsv.txt
+
+注意：
+	filereport_read_run_PRJNA229998_tsv.txt 格式很重要，因为要判断退出码，故决不能出错，否则会重复运行而不能退出
+	# cat filereport_read_run_PRJNA655955_tsv.txt 
+	SRR12414240     fasp.sra.ebi.ac.uk:/vol1/srr/SRR124/040/SRR12414240
+	SRR12414241     fasp.sra.ebi.ac.uk:/vol1/srr/SRR124/041/SRR12414241
+	SRR12414242     fasp.sra.ebi.ac.uk:/vol1/srr/SRR124/042/SRR12414242
+	SRR12414243     fasp.sra.ebi.ac.uk:/vol1/srr/SRR124/043/SRR12414243
