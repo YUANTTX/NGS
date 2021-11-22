@@ -1,0 +1,139 @@
+commit 2c5667a13d2623c88091973a94406d718f90365b
+Author: YUANTTX <YUANTTX@163.com>
+Date:   Sat Nov 20 17:04:29 2021 +0800
+
+    2021.11.20
+
+ 0workplace/README                                  |    20 +
+ workspace.sh => 0workplace/workspace.sh            |     0
+ 1download/README                                   |    20 +
+ 1download/SRR_Acc_List.txt                         |    62 +
+ ascp.sh => 1download/ascp.sh                       |     0
+ ascp_tang.sh => 1download/ascp_tang.sh             |     0
+ fasterq.sh => 1download/fasterq.sh                 |     0
+ 1download/filereport_read_run_PRJNA229998_tsv.txt  |     7 +
+ prefetch.sh => 1download/prefetch.sh               |     0
+ 2index/README                                      |     7 +
+ 2index/bowtie2.sh                                  |     6 +
+ 2index/bwa.sh                                      |     6 +
+ 2index/hisat.sh                                    |     6 +
+ 2index/salmon.sh                                   |     9 +
+ 2index/star.sh                                     |     6 +
+ 3fastqc/README                                     |     9 +
+ fastqc.sh => 3fastqc/fastqc.sh                     |     0
+ multiqc.sh => 3fastqc/multiqc.sh                   |     0
+ 4clean/README                                      |     6 +
+ cutadapt.sh => 4clean/cutadapt.sh                  |     0
+ fastp.sh => 4clean/fastp.sh                        |     0
+ trim_galore.sh => 4clean/trim_galore.sh            |     0
+ trimmomatic.sh => 4clean/trimmomatic.sh            |     0
+ 5rmrRNA/README                                     |    11 +
+ bowtie2.sh => 5rmrRNA/bowtie2.sh                   |     0
+ 6alignment/README                                  |    10 +
+ bowtie.sh => 6alignment/bowtie.sh                  |     0
+ bwa.sh => 6alignment/bwa.sh                        |     0
+ hisat.sh => 6alignment/hisat.sh                    |     0
+ salmon.sh => 6alignment/salmon.sh                  |     0
+ 6alignment/salmon/check_shasum.sh                  |    26 +
+ 6alignment/salmon/generateDecoyTranscriptome.sh    |   143 +
+ star.sh => 6alignment/star.sh                      |     0
+ .../step2-alignment-HISAT.sh                       |     0
+ 6alignment/step2-alignment-TopHat2.sh              |    11 +
+ .../step2-alignment-bowtie2.sh                     |     0
+ 6alignment/step2-alignment-salmon.sh               |     0
+ 7sam2bam/README                                    |    10 +
+ sam2bam.sh => 7sam2bam/sam2bam.sh                  |     0
+ 8counts/README                                     |    10 +
+ cufflinks.sh => 8counts/cufflinks.sh               |     0
+ featureCounts.sh => 8counts/featureCounts.sh       |     0
+ htseq-counts.sh => 8counts/htseq-counts.sh         |     0
+ .../step3-counts-Bedtools.sh                       |     0
+ 8counts/step3-counts-HTseq.sh                      |     6 +
+ .../step3-counts-cufflinks.sh                      |     0
+ 8counts/step3-counts-featureCounts.sh              |     0
+ 9mutation/README                                   |     8 +
+ gatk.sh => 9mutation/gatk.sh                       |     0
+ samtool.sh => 9mutation/samtool.sh                 |     0
+ chipseq/step0-install.sh                           |   260 +
+ ...-download-SRA-data-and-change-to-fastq-files.sh |    43 +
+ chipseq/step2-QC-fastx-and-fastqc.sh               |    39 +
+ chipseq/step3-alignment-to-reference-by-bowtie2.sh |    93 +
+ chipseq/step4-peaks-calling-by-macs2-peakranger.sh |    42 +
+ chipseq/step5-peaks-view-alignment-bed.R           |    53 +
+ chipseq/step5-peaks-view-bedGraph.R                |    40 +
+ chipseq/step5-peaks-view-samtools-depth.R          |    62 +
+ chipseq/step5-peaksView.sh                         |     9 +
+ chipseq/step6-CEAS.sh                              |    26 +
+ chipseq/step6-ChIPpeakAnno-1.R                     |    76 +
+ chipseq/step6-ChIPpeakAnno-EnsDb.R                 |    38 +
+ chipseq/step6-ChIPpeakAnno-UCSCdb.R                |    34 +
+ chipseq/step6-ChIPpeakAnno-Venn.R                  |    29 +
+ chipseq/step6-ChIPpeakAnno-genomic-greatures.R     |    24 +
+ chipseq/step6-ChIPseeker-1.R                       |   120 +
+ chipseq/step6-bam-bed2bedGraph.sh                  |    12 +
+ chipseq/step6-bam2wig.sh                           |    10 +
+ chipseq/step7-peaks-bed2fasta.sh                   |     6 +
+ chipseq/step7-peaks2sequence.R                     |    25 +
+ chipseq/step8-Homer-findMotif.sh                   |    62 +
+ chipseq/step8-MIMEsuite-findMotif.sh               |    25 +
+ riboseq/README                                     |     1 +
+ riboseq/step0_workplace.sh                         |     7 +
+ riboseq/step1_downSRA.sh                           |    11 +
+ riboseq/step2_SRA2fastq.sh                         |    16 +
+ riboseq/step2_SRA2fastq2.sh                        |    33 +
+ riboseq/step3_cleanfq.sh                           |    29 +
+ riboseq/step4_rmrRNA.sh                            |    22 +
+ riboseq/step5_fastqc.sh                            |    14 +
+ riboseq/step6_mapping.sh                           |    27 +
+ riboseq/step7_sam2bam.sh                           |    25 +
+ riboseq/step8_counts.sh                            |    51 +
+ riboseq/step9_lncRNAexp.sh                         |    17 +
+ rnaseq/filereport_read_run_PRJNA229998_tsv-6.txt   |     7 +
+ rnaseq/step01_downloadSeq_2.6.sh                   |    41 +
+ rnaseq/step01_sra_download.sh                      |    26 +
+ rnaseq/step02_sra2fastq.sh                         |    22 +
+ rnaseq/step03-fastp.sh                             |    51 +
+ rnaseq/step1-RNA-SeQC.sh                           |    27 +
+ rnaseq/step1-qualimap.sh                           |     0
+ rnaseq/step2-alignment-HISAT.sh                    |    18 +
+ rnaseq/step2-alignment-TopHat2.sh                  |    11 +
+ rnaseq/step2-alignment-bowtie2.sh                  |    13 +
+ rnaseq/step2-alignment-salmon.sh                   |     0
+ rnaseq/step3-counts-Bedtools.sh                    |     4 +
+ rnaseq/step3-counts-HTseq.sh                       |     6 +
+ rnaseq/step3-counts-cufflinks.sh                   |     9 +
+ rnaseq/step3-counts-featureCounts.sh               |     0
+ .../step4-DEG-DESeq2.R                             |    88 +
+ .../step4-DEG-bayseq.R                             |    44 +
+ .../step4-DEG-cuffdiff.sh                          |    11 +
+ .../step4-DEG-edgeR.R                              |    96 +
+ .../step4-DEG-voom.R                               |    57 +
+ rnaseq/step5-enrichment/GO.BP.hyperG.summary.csv   |  7974 +++
+ rnaseq/step5-enrichment/GO.CC.hyperG.summary.csv   |   895 +
+ rnaseq/step5-enrichment/GO.MF.hyperG.summary.csv   |  1528 +
+ .../step5-enrichment/KEGG_update/kegg2geneID.txt   | 24297 ++++++++
+ .../KEGG_update/kegg_hierarchical.txt              |   345 +
+ rnaseq/step5-enrichment/KEGG_update/kegg_update.sh |     6 +
+ .../backgroudGenelist/hgu133a.genelist.txt         | 12442 ++++
+ .../backgroudGenelist/hgu133plus2.genelist.txt     | 20546 +++++++
+ .../backgroudGenelist/hgu95av2.genelist.txt        |  8597 +++
+ .../backgroudGenelist/org.Hs.eg.genelist.txt       | 59500 +++++++++++++++++++
+ .../backgroudGenelist/produceGeneList.R            |    12 +
+ rnaseq/step5-enrichment/enrichment_jimmy.R         |    91 +
+ rnaseq/step5-enrichment/kegg.hyperG.summary.csv    |   209 +
+ rnaseq/step5-enrichment/lincs_entrez_gene_list.txt |   978 +
+ rnaseq/step5-enrichment/update_kegg.enrichment.csv |   279 +
+ wes/README                                         |   203 +
+ wes/step_0_fastqc.sh                               |    14 +
+ wes/step_10_snp_calling_gatk_UG.sh                 |    23 +
+ wes/step_11_snp_calling_varscan.sh                 |    14 +
+ wes/step_1_fastq2bam.sh                            |    22 +
+ wes/step_2_sam2bam_sort.sh                         |    29 +
+ wes/step_3_duplicated.sh                           |    19 +
+ wes/step_4_RealignerTargetCreator.sh               |    21 +
+ wes/step_5_Indel_Realigner.sh                      |    20 +
+ wes/step_6_bam2mpipeup.sh                          |    13 +
+ wes/step_7_snp_calling_bcftools.sh                 |    13 +
+ wes/step_8_merge_bam.sh                            |     9 +
+ wes/step_9_snp_calling_freebayes.sh                |    13 +
+ 132 files changed, 140423 insertions(+)
