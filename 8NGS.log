@@ -1,8 +1,8 @@
-commit ebb104767b80fd7b784d26c389a18137776e0f55
+commit ba803d1cfecdd0ecb3eb80e9ed087cdf2a46678c
 Author: YUANTTX <YUANTTX@163.com>
-Date:   Mon Nov 22 19:24:56 2021 +0800
+Date:   Sun Nov 28 19:00:30 2021 +0800
 
-    2021-11-22 19:24:27
+    2021-11-28 19:00:01
 
- 8NGS.log | 139 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
- 1 file changed, 139 insertions(+)
+ 8NGS.log | 141 +++------------------------------------------------------------
+ 1 file changed, 5 insertions(+), 136 deletions(-)
